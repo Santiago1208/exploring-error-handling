@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Oops! An error occurred</title>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+	<div class="container my-4 card">
+		<div class="card-body">
+			<div class="row justify-content-center">
+				<h3>Oops! An error occurred</h3>
+			</div>
+			<div class="row justify-content-center">
+				<img th:src="@{/icons/500.png}" alt="Server error">
+			</div>
+			<div th:text="${error}"></div>
+			<div th:text="${message}"></div>
+			<div th:text="${status}"></div>
+			<div th:text="${timestamp}"></div>
+			<br>
+			<code th:text="${trace}"></code>
+		</div>
+	</div>
+</body>
+</html>

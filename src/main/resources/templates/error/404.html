@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Oops! Page not found</title>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+	<div class="container my-4 card">
+		<div class="card-body">
+			<div class="row justify-content-center">
+				<h3>Oops! Page not found</h3>
+			</div>
+			<div class="row justify-content-center">
+				<img th:src="@{/icons/404.png}" alt="Server error">
+			</div>
+			<div th:text="${error}"></div>
+			<div th:text="${status}"></div>
+			<div th:text="${timestamp}"></div>
+			<br>
+			<code th:text="'Wrong requested path: ' + ${path}"></code>
+		</div>
+	</div>
+</body>
+</html>
